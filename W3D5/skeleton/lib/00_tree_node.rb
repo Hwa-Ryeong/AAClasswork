@@ -18,7 +18,9 @@ class PolyTreeNode
 
     def add_child(new_child)
         new_child.parent = self
+        new_child
     end
+
 
     def remove_child(child)
         raise "The #{child.value} node is not a child" unless self.children.include?(child)
@@ -98,4 +100,32 @@ end
 # parent_node.children => [child, charleu, thegue, happyface]
 # child.children >> []
 # parent_node.children.each {|child| p child.children}
+
+
+
+
+
+# ################
+# knight_pos1
+#         @value = [0,0]
+#         @parent = nil
+#         @children = []
+
+
+# next_pos
+#     @value = [2,1]
+#     @parent = nil
+#     @children = []
+
+# knight_pos1.add_child(next_pos)
+
+# knight_pos1
+#         @value = [0,0]
+#         @parent = nil
+#         @children = [next_pos]
+
+# next_pos
+#     @value = [2,1]
+#     @parent = knight_pos1
+#     @children = []
 
